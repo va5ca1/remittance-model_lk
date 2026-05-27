@@ -222,6 +222,30 @@ The naive OLS produced backwards signs. Recognising and diagnosing this (using t
 
 ---
 
+## final thoughts
+
+This project took a bit longer than I expected, and I definitely made alot of mistakes along the way. The data cleaning alone probably took more time than all four models combined, which apparently is a very normal experience in data science and not really something that the internet warns you about. 
+
+A few honest limitations worth flagging (as with any "scientific" inquiry with data and math);
+
+**The post-crisis sample is very tiny.** 36 months is not a lot to work with. The Chow test being borderline (with a p = 0.068 rather than 0.05) is partly just a reflection of that - the test doesn't have enough observations to be definitively decisive. A longer post-crisis window would strengthen every finding here. 
+
+**The GCC gross domestic product variable is constructed.** I couldn't get the IMF file to open (like it was genuinely corrupted I think), so I had to manually enter all known annual GDP values for the six GCC countries and interpolated them to monthly. It's reasonable, but it's not really the same as having real monthly data. A better proxy might be GCC PMI data or Gulf stock market indices, which actually move month month - but I think that's just too convoluted for building a model for the first time. 
+
+**The exchange rate story is incomplete.** The LKR/USD rate loses significance once you control for the crisis, which probably means that the rupee's effect on remittances is more complicated than a simple linear relationship. There's likely a threshold effect, where moderate depreciation encourages remittances, but a full currency collapse suppresses them through panic and banking dysfunction. Modelling that properly would require a nonlinear model that I didn't want to attempt just now (Yet?). 
+
+**Spurious regression is managed but not fully solved.** The AR(1) model helps and the growth-rate model strips out the trend, but a more rigorous treatment would handle something called formal root tests (the Augmented Dickey-Fuller test) and potentially a cointegration framework (??) if the variables share a long-run equilibrium. Concepts I found out while researching, that I wasn't too inclined to introduce into this project. 
+
+**on using Claude to build this,**
+
+I'll be straightforward about this. I used Claude like, extensively throughout this project. Every script in 'src/' was written with its assistance, mostly because I had very limited Python and datascraping experience prior. 
+
+While I would usually agree that using AI to build something up *completely* is a very unproductive and reductive thing to do (looking at you specifically; all the slop AI LinkedIn posts and web projects), I don't think that would apply here in this project. The code (which was what the AI was used for here) was never the point of this. What I was actually trying to do was understand whether econometric models could tell me something about a genuine question that I had. The AI handled all the syntax (and occasionally broke down the principles), but I had to understand what I was asking it to do, why each model was structured the way it was, what the output meant and like whether the findings made economic sense. When the results came backwards due to spurious regression (which I didn't know of while I was making this), I had to recognize that something was wrong and know what to look for. And tadaa, it was the Durbin-Watson statistic, the spurious regression problem itself and the entire logic of splitting the sample up.
+
+If the question is whether I learned anything: yes! I now know why log transformations matter, what a structural break test is checking for, and whay a DW of 0.40 should make anyone suspicious. I couldn've have told you any of that before I started this entire project. That, at least in my humble opinion, feels like the right outcome for a first attempt at anything:)
+
+---
+
 ## how to run this yourself
 
 ```bash
