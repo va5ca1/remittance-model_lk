@@ -160,16 +160,19 @@ The test produces an **F-statistic** and a p-value. A small p-value means we can
 
 On its own, that sounds weak. But look at what happens when the sample is split and separate regressions are run:
 
+
 | Period | N | R² |
 |---|---|---|
 | Pre-crisis (Jan 2009 – Mar 2022) | 159 | 0.228 |
 | Post-crisis (Apr 2022 – Mar 2025) | 36 | **0.798** |
+
 
 The model explains 23% of variance pre-crisis and 80% post-crisis. That's a massive regime shift - and the Chow test's borderline p-value is partly a statistical power problem: 36 post-crisis observations is a very small sample, which limits how decisive the test can be. The R² difference is arguably more telling than the p-value here.
 
 What's my intepretation of this? Before 2022, remittances were partly driven by seasonal cycles, informal hawala transfer channels, and things not in this model. After 2022, workers appear to have shifted towards formal banking channels to capture the weaker rupee - making flows much more responsive to macro variables.
 
 The Brent oil elasticity also shifted: from −0.45 pre-crisis to −1.28 post-crisis (interaction term significant at 5%). Gulf workers became more financially exposed to oil price swings after the crisis - possibly because remittance pressure from families increased during the recovery period.
+
 
 ### what is the CUSUM test?
 
