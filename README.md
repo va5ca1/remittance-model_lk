@@ -1,7 +1,6 @@
 # a barebones Sri Lankan remittance model 
-*a first attempt at econometrics*
+*my first lack-lustre attempt at econometrics*
 
----
 ---
 
 ## **what is this?**
