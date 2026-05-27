@@ -34,7 +34,7 @@ Getting these into one clean dataset was honestly the hardest part, mostly becau
 
 ## the approach - what is actually going on here
 
-Before getting into the models, it's worth stepping back and explaining what econometrics actually is and how this whole thing is being approached. Because when I started, I didn't know what half of these words meant either.
+Before getting into the models, it's worth stepping back and explaining what econometrics actually is and how this whole thing is being approached. Because when I started, I didn't know what half of these words meant either (to be more precise; had no idea what any of these concepts were called officially). 
 
 ### what is econometrics?
 
