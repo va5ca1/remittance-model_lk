@@ -138,7 +138,7 @@ And the answer? Barely -> R² = 0.059. Oil growth is statistically significant b
 
 ### model 4 - AR(1) with last month as a predictor, R² = 0.799
 
-I added last month’s remittances as an extra predictor. . The AR coefficient comes out at **0.873\*\*\*** - meaning that 87% of last month's level carries into this month before oil prices or the exchange rate even come into play.
+I added last month’s remittances as an extra predictor. The AR coefficient comes out at **0.873** - meaning that 87% of last month's level carries into this month before oil prices or the exchange rate even come into play.
 
 The DW improves to 2.62, which is pretty clean. And the R² hits 0.799. The trade-off though: once the lag is included, oil price and exchange rate lose significance because the lag absorbs their signal. This doesn't mean they're irrelevant; it means their effect plays out over several months rather than instantaneously.
 
