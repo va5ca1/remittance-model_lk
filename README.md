@@ -28,7 +28,7 @@ All data is pulled from four public sources.
 | Brent crude oil price | World Bank Pink Sheet | Monthly | 1960 |
 | GCC countries' GDP | IMF World Economic Outlook | Annual | 2009 |
 
-Getting these into one clean dataset is honestly the hardest part, mostly because they arrive in completely different formats. The CBSL files use merged cells, the IMF export is a corrupted binary, and the World Bank dates are formatted like `1960M01`. The cleaning script (`src/02_data_cleaning.py`) handles all of that and produces one tidy CSV: 195 monthly rows from January 2009 to March 2025.
+Getting these into one clean dataset was honestly the hardest part, mostly because they arrive in completely different formats. The CBSL files use merged cells, the IMF export is a corrupted binary, and the World Bank dates are formatted like `1960M01`. The cleaning script (`src/02_data_cleaning.py`) handles all of that and produces one tidy CSV: 195 monthly rows from January 2009 to March 2025.
 
 ---
 
