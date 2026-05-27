@@ -2,9 +2,6 @@
 *a first attempt at econometrics*
 
 ---
-
-![Final Dashboard](outputs/figures/final_dashboard.png)
-
 ---
 
 ## **what is this?**
@@ -93,6 +90,10 @@ I used three “candidate” predictors:
 3. **GCC GDP**, which was a more direct measure of the Gulf economic output
 
 I ran four different models, each asking a slightly varied version of the question. 
+
+---
+
+![Final Dashboard](outputs/figures/final_dashboard.png)
 
 ---
 
