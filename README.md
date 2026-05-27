@@ -1,5 +1,4 @@
-# sri lanka remittance model
-
+# a barebones Sri Lankan remittance model 
 *a first attempt at econometrics*
 
 ---
@@ -33,11 +32,11 @@ Getting these into one clean dataset is honestly the hardest part, mostly becaus
 
 ---
 
-## the approach — what is actually going on here
+## the approach - what is actually going on here
 
 Before getting into the models, it's worth stepping back and explaining what econometrics actually is and how this whole thing is being approached. Because when I started, I didn't know what half of these words meant either.
 
-### what is econometrics?
+</ins>### what is econometrics?</ins>
 
 Econometrics is essentially statistics applied to economic data - specifically, it tries to answer *causal* questions rather than just descriptive ones. Not just "oil prices and remittances both went up in 2021" but "does a 1% rise in oil prices *cause* remittances to increase, and by how much?"
 
