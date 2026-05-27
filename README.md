@@ -7,8 +7,8 @@
 
 ---
 
-## what is this?
-
+**## what is this?
+**
 Amidst the other jumble of jargon that is thrown around within the field of economics, remittances (more specifically remittance income) are especially significant in the context of Sri Lanka. Where Sri Lankan migrant workers often send sums of money back to the country, usually from the Gulf states. Remittances are one of Sri Lanka’s biggest sources of foreign income, and I kept wondering: does it go up when oil prices rise? (Sort of a stupid thought to have, but fitting given the economic drivers of the Gulf state economies) Does a weaker rupee make people send more? And finally, what did the 2022 economic collapse actually do to these flows? 
 
 So I “attempted” to build a model. Using the extremely limited coding knowledge I have (and a LOT of ClaudeCode).
@@ -17,8 +17,8 @@ This README is me walking through what I found, what confused me and more import
 
 ---
 
-## the data
-
+**## the data
+**
 All data is pulled from four public sources.
 
 | What | Where from | How often | How far back |
@@ -32,11 +32,11 @@ Getting these into one clean dataset is honestly the hardest part, mostly becaus
 
 ---
 
-## the approach - what is actually going on here
-
+**## the approach - what is actually going on here
+**
 Before getting into the models, it's worth stepping back and explaining what econometrics actually is and how this whole thing is being approached. Because when I started, I didn't know what half of these words meant either.
 
-</ins>### what is econometrics?</ins>
+### what is econometrics?
 
 Econometrics is essentially statistics applied to economic data - specifically, it tries to answer *causal* questions rather than just descriptive ones. Not just "oil prices and remittances both went up in 2021" but "does a 1% rise in oil prices *cause* remittances to increase, and by how much?"
 
@@ -88,8 +88,8 @@ A DW value near **2** means no autocorrelation (good). A value near **0** means 
 
 ---
 
-## what I'm testing
-
+**## what I'm testing
+**
 The core question that I'm asking here is: **what predicts remittances?**
 
 I used three “candidate” predictors:
@@ -101,8 +101,8 @@ I ran four different models, each asking a slightly varied version of the questi
 
 ---
 
-## the models
-
+**## the models
+**
 ### model 1 - the basic one, log-log OLS, R² = 0.285
 
 This was my starting point. Taking the log of everything and running a standard OLS regression. As explained above, the coefficients should come out as elasticities - intuitive and easy to interpret.
@@ -151,8 +151,8 @@ This was what I used as the base for the forecasts below.
 
 ---
 
-## the structural break test
-
+**## the structural break test
+**
 ![CUSUM Plot](outputs/figures/chow_cusum_plot.png)
 
 ### what is the Chow test?
@@ -186,8 +186,8 @@ If the model's underlying relationships are stable throughout the sample, the su
 
 ---
 
-## scenario forecasts (12 months from April 2025)
-
+**## scenario forecasts (12 months from April 2025)
+**
 ![Forecast Chart](outputs/figures/forecast_scenarios.png)
 
 Using the AR(1) model, four possible macro futures are simulated:
@@ -208,8 +208,8 @@ Mixed outcome: more LKR per dollar sent could encourage transfers, but a currenc
 
 ---
 
-## final summary of findings
-
+**## final summary of findings
+**
 **1. GCC economic output is the dominant driver.**
 The GCC GDP elasticity (+1.14) is the most stable coefficient across every specification. The Gulf economy (not the exchange rate) is the primary determinant of how much workers send home.
 
@@ -227,8 +227,8 @@ The naive OLS produced backwards signs. Recognising and diagnosing this (using t
 
 ---
 
-## how to run this yourself
-
+**## how to run this yourself
+**
 ```bash
 git clone https://github.com/va5ca1/remittance-model_lk
 cd remittance-model_lk
