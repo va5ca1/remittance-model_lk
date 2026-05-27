@@ -43,7 +43,6 @@ Econometrics is essentially statistics applied to economic data - specifically, 
 The standard tool for this is **regression**, which finds the mathematical relationship between one variable (what we're trying to explain - here, remittances) and a set of other variables (the things we think explain it - here, oil prices, the exchange rate, and GCC GDP).
 
 ### what is OLS?
-
 **OLS stands for Ordinary Least Squares.** It's the most common method for running a regression, and the name describes exactly what it does: it finds the line (or surface, in multiple dimensions) that minimises the sum of squared distances between the actual data points and the line's predictions. "Least squares" = minimise the squared errors.
 
 The output is a set of **coefficients** - one for each predictor variable - which tells you: *holding everything else constant, if X increases by 1 unit, remittances change by β units.* The coefficients are what we're really after.
@@ -51,37 +50,31 @@ The output is a set of **coefficients** - one for each predictor variable - whic
 (This is basically least squares regression in statistics). 
 
 ### why log everything?
-
 In economics, it's common to take the natural logarithm of both the outcome variable and the predictors before running the regression. This is called a **log-log model**, and the reason it's useful is that the coefficients become **elasticities** - percentage relationships rather than unit relationships.
 
 So instead of "a $1 rise in oil price increases remittances by $X million", you get "a 1% rise in oil prices increases remittances by β%". That's a much more interpretable and comparable number, and it works regardless of the units or scale of the variables.
 
 ### what are dummy variables?
-
-A **dummy variable** is a variable that is either 0 or 1 - it acts like an on/off switch in the regression. Here, I create a `crisis_period` dummy that equals 1 during the acute 2022 crisis months and 0 everywhere else, and a `post_crisis` dummy that equals 1 for all months after April 2022.
+A **dummy variable** is a variable that is either 0 or 1 - it acts like an on/off switch in the regression. Here, I've created a `crisis_period` dummy that equals 1 during the acute 2022 crisis months and 0 everywhere else, and a `post_crisis` dummy that equals 1 for all months after April 2022.
 
 Including these in the regression lets the model account for the fact that the 2022 crisis wasn't just a large fluctuation - it may have permanently shifted the level of remittances up or down, independently of what oil prices and the exchange rate were doing.
 
 ### what is a structural break?
-
 A **structural break** is when the underlying relationship between variables fundamentally changes at some point in time. Not just "remittances fell in 2022" but "the *way* remittances respond to oil prices and the exchange rate changed after 2022.
 
 This matters quite a lot. If the relationship changed, then a model estimated on 2009–2025 data is blending two different regimes together - which can produce misleading results. Testing for a structural break means formally asking: are the regression coefficients the same before and after April 2022, or did they shift?
 
 ### what is an AR(1) model?
-
 **AR(1) stands for Autoregressive lag-1 model.** The idea is simple: instead of only using oil prices, exchange rates, and GDP to predict remittances, we also include *last month's remittances* as a predictor (To be totally honest, I got pretty confusing here on after). 
 
 This captures the fact that economic series tend to have **momentum** - this month's value is partly just a continuation of last month's. If the AR coefficient is 0.87, it means 87% of last month's level carries forward into this month, before the other variables even come into play. It's often the single most predictive variable in macroeconomic time-series data.
 
 ### what is R²?
-
 **R²** (R-squared) is a measure of how well the model fits the data, ranging from 0 to 1. An R² of 0.80 means the model explains 80% of the variation in remittances. The remaining 20% is driven by things not in the model.
 
 Higher is generally better, but a high R² can sometimes be misleading - which is exactly what the spurious regression problem below is about.
 
 ### what is the Durbin-Watson statistic?
-
 **Durbin-Watson (DW)** is a diagnostic test for autocorrelation - whether the model's errors are correlated with each other across time. In a well-specified model, the errors should be random: if the model over-predicted this month, that should have no bearing on whether it over-predicts next month.
 
 A DW value near **2** means no autocorrelation (good). A value near **0** means strong positive autocorrelation (bad) - the errors are trending in the same direction across time, which is usually a sign that something is seriously wrong with the model.
