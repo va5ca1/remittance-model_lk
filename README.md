@@ -190,13 +190,13 @@ Using the AR(1) model, four possible macro futures are simulated:
 **Baseline** -> oil flat around $75, LKR stable, GCC modest growth.
 Remittances continue their post-crisis recovery trajectory.
 
-**Gulf Boom** -> oil rises ~27% over 12 months, strong GCC expansion.
+**A Gulf boom** -> oil rises ~27% over 12 months, strong GCC expansion.
 Best case for remittances; Gulf hiring picks up and workers send more.
 
-**GCC Recession** -> oil falls ~35%, GCC GDP contracts.
+**A GCC recession** -> oil falls ~35%, GCC GDP contracts.
 Significant downside; the oil-remittance link means a Gulf slowdown hits Sri Lankan households directly.
 
-**LKR Crisis Repeat** -> rupee depreciates ~35% again.
+**LKR crisis repeat** -> rupee depreciates ~35% again.
 Mixed outcome: more LKR per dollar sent could encourage transfers, but a currency collapse also signals economic instability that historically suppresses formal flows.
 
 (It's pretty important for me to note that these are scenario simulations, not point predictions. The point is to illustrate how sensitive remittances are to different macro environments, and not necessarily just to forecast a specific number).
