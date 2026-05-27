@@ -9,7 +9,7 @@
 
 ## **what is this?**
 
-Amidst the other jumble of jargon that is thrown around within the field of economics, remittances (more specifically remittance income) are especially significant in the context of Sri Lanka. Where Sri Lankan migrant workers often send sums of money back to the country, usually from the Gulf states. Remittances are one of Sri Lanka’s biggest sources of foreign income, and I kept wondering: does it go up when oil prices rise? (Sort of a stupid thought to have, but fitting given the economic drivers of the Gulf state economies) Does a weaker rupee make people send more? And finally, what did the 2022 economic collapse actually do to these flows? 
+Amidst the other jumble of jargon that is thrown around within the field of economics, remittances (more specifically remittance income) are especially significant in the context of Sri Lanka. Where Sri Lankan migrant workers often send sums of money back to the country, usually from the Gulf states. Remittances are one of Sri Lanka’s biggest sources of foreign income, and I kept wondering: does it go up when oil prices rise? (Sort of a stupid thought to have, but fitting given the economic drivers of the Gulf state economies) Or does a weaker rupee make people send more? And finally, what did the 2022 economic collapse actually do to these flows? 
 
 So I “attempted” to build a model. Using the extremely limited coding knowledge I have (and a LOT of ClaudeCode).
 
