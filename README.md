@@ -242,11 +242,11 @@ I'll be straightforward about this. I used Claude like, extensively throughout t
 
 While I would usually agree that using AI to build something up *completely* is a very unproductive and reductive thing to do (looking at you specifically; all the slop AI LinkedIn posts and web projects), I don't think that would apply here in this project. The code (which was what the AI was used for here) was never the point of this. What I was actually trying to do was understand whether econometric models could tell me something about a genuine question that I had. The AI handled all the syntax (and occasionally broke down the principles), but I had to understand what I was asking it to do, why each model was structured the way it was, what the output meant and like whether the findings made economic sense. When the results came backwards due to spurious regression (which I didn't know of while I was making this), I had to recognize that something was wrong and know what to look for. And tadaa, it was the Durbin-Watson statistic, the spurious regression problem itself and the entire logic of splitting the sample up.
 
-If the question is whether I learned anything: yes! I now know why log transformations matter, what a structural break test is checking for, and whay a DW of 0.40 should make anyone suspicious. I couldn've have told you any of that before I started this entire project. That, at least in my humble opinion, feels like the right outcome for a first attempt at anything:)
+If the question is whether I learned anything: yes! I now know why log transformations matter, what a structural break test is checking for, and why a DW of 0.40 should make anyone suspicious. I couldn't have told you any of that before I started this entire project. And that, at least in my humble opinion, feels like the right outcome for a first attempt at anything:)
 
 ---
 
-## how to run this yourself
+## how to run this yourself!!
 
 ```bash
 git clone https://github.com/va5ca1/remittance-model_lk
